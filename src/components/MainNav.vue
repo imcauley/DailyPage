@@ -13,24 +13,17 @@
 
     <v-divider></v-divider>
 
-    <v-list nav dense>
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-title>Today</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>History</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Edit Template</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
+    <v-tabs vertical>
+      <v-tab to="/today">
+        Today
+      </v-tab>
+      <v-tab to="/history">
+        History
+      </v-tab>
+      <v-tab to="/edit-template">
+        Edit Template
+      </v-tab>
+    </v-tabs>
 
   </v-navigation-drawer>
 </template>
