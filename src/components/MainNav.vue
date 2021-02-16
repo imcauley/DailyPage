@@ -13,23 +13,25 @@
 
     <v-divider></v-divider>
 
-      <v-list
-        nav
-      >
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
+    <v-list nav dense>
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
+          <v-list-item>
+            <v-list-item-title>Today</v-list-item-title>
+          </v-list-item>
 
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+          <v-list-item>
+            <v-list-item-title>History</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Edit Template</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
       </v-list>
+
   </v-navigation-drawer>
 </template>
 
